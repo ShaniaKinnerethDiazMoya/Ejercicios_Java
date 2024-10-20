@@ -1,14 +1,25 @@
+import java.util.Scanner;
+
 public class MatrizSimetrica {
     public static void main(String[] args) {
-        int[][] matriz = {
-            {1, 2, 3},
-            {2, 4, 5},
-            {3, 5, 6}
-        };
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Introduce el tamaño de la matriz (n x n): ");
+        int n = sc.nextInt();
+        
+        int[][] matriz = new int[n][n];
+        
+        System.out.println("Introduce los elementos de la matriz:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matriz[i][j] = sc.nextInt();
+            }
+        }
         
         boolean esSimetrica = true;
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
                 if (matriz[i][j] != matriz[j][i]) {
                     esSimetrica = false;
                     break;
