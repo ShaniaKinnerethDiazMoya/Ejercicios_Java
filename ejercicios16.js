@@ -2,6 +2,7 @@ public class Rango {
     public static boolean estaEnRango(int numero, int limiteInferior, int limiteSuperior) {
         return numero >= limiteInferior && numero <= limiteSuperior;
     }
+    
 
     public static void main(String[] args) {
         int numero = 5;
